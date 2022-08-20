@@ -25,26 +25,68 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: var(--common-white);
     color: var(--primary-color);
-    width: 1600px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--primary-text-size);
+    letter-spacing: 0.03em;
 }
 
 h1,
 h2,
 h3,
-p,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 ul {
     margin: 0px;
     padding: 0px;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .container{
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
     margin: 0 auto;
+    padding: 0 15px;
 }
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* =========HEADER========= */
 
 
 .header {
@@ -58,7 +100,6 @@ ul {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 
@@ -80,10 +121,6 @@ ul {
     color: var(--logo-color);
 }
 
-.list {
-    list-style: none;
-}
-
 .navigation {
     display: flex;
     align-items: center;
@@ -91,13 +128,6 @@ ul {
 
 .navigation-list {
     display: flex;
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: var(--medium);
-    font-size: var(--primary-text-size);
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-color);
 }
 
 .navigation-item:not(:last-child) {
@@ -105,16 +135,15 @@ ul {
 } 
 
 .navigation-link {
+    font-family: var(--main-font);
+    font-weight: var(--medium);
+    font-size: var(--primary-text-size);
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     color: var(--primary-color);
-    text-decoration: none;
-    font-size: var(--text-size); 
 }
 
-.current {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
+.current,
 .navigation-link:hover,
 .navigation-link:focus,
 .coord-link:hover,
@@ -125,13 +154,7 @@ ul {
 
 .coord-list {
     display: flex;
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: var(--medium);
-    font-size: var(--primary-text-size);
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color:var(--secondary-color);
+    margin-left: auto;
 }
 
 .coord-item:not(:last-child) {
@@ -139,20 +162,27 @@ ul {
 }
 
 .coord-link {
-    color: var(--secondary-color);
-    text-decoration: none;
+    font-family: var(--main-font);
+    font-weight: var(--medium);
+    font-size: var(--primary-text-size);
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color:var(--secondary-color);
 }
+
+/* ==================MAIN================== */
 
 /* Секція "Ефективні рішення для вашого бізнесу" */
 
-.section {
-     padding: 200px 452px;
-     background-color: var(--dark-gray);
-     text-align: center;
+.solutions {
+    padding: 200px 0px;
+    background-color: var(--dark-gray);
 
 }
 
 .section-title {
+    width: 696px;
+    margin: 0 auto;
     margin-bottom: 30px;
     font-family: var(--main-font);
     font-weight:var(--extra-bold);
@@ -167,15 +197,12 @@ ul {
 .button { 
     background-color: var(--accent-color);
     color: var(--common-white);
-    border:none;
-    border-radius: 4px;
     padding: 10px 32px;
     font-family: var(--main-font);
     font-weight: var(--bold);
     font-size: var(--secondary-text-size);
     line-height: 1.87;
     letter-spacing: 0.06em;
-    cursor: pointer;
     box-shadow: 0px 4px 4px var(--shadow-color);
 }
 
@@ -187,11 +214,6 @@ ul {
 
 
 /* <--Секція "Особливості"--> */
-
-.trait {
-    padding-top: 94px;
-    padding-bottom: 94px;   
-}
 
 
 .trait-title {
@@ -233,8 +255,7 @@ ul {
 /* Секція "Чим ми займаємося" */
 
 .activity {
-    padding-bottom: 94px;
-    background-color: var(--common-white);
+    padding-top: 0;
 }
 
 .activity-title {
@@ -258,15 +279,9 @@ ul {
     margin-right: 30px;
 }
 
-.activity-page {
-    display: block;
-}
-
 /* Секція "Наша команда" */
 
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--back-color);
 }
 
@@ -296,9 +311,10 @@ ul {
     margin-right: 0px;
 }
 
-.team-item-photo {
-    display: block;
-    margin-bottom: 30px;
+
+.div-team {
+    padding: 30px 0px;
+    text-align: center;
 }
 
 .team-item-title {
@@ -307,7 +323,6 @@ ul {
     font-weight: var(--medium);
     font-size: var(--secondary-text-size);
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color:var(--primary-color);
     margin-bottom: 10px;
@@ -318,13 +333,11 @@ ul {
     font-family: var(--main-font);
     font-size: var(--secondary-text-size);
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color:var(--secondary-color);
-    margin-bottom: 30px;
 }
 
-/* FOOTER */
+  /* =========FOOTER========= */
 
 .footer,
 .footer-portfolio {
@@ -352,7 +365,6 @@ ul {
 
 
 .footer-address-link {
-    text-decoration: none;
     color:var(--common-white);
     font-family: var(--main-font);
     font-style: normal;
@@ -370,7 +382,6 @@ ul {
 
 
 .address-link {
-    text-decoration: none;
     color: var(--clear-white);
     font-family: var(--main-font);
     font-style: normal;
@@ -396,17 +407,10 @@ ul {
     color:var(--common-white);
     
 }
+
+
  /* < -- main for portfolio --> */
 
-.portfolio-main {
-    background-color: var(--common-white);
-}
-
-.portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--common-white);
-}
 
 .portfolio-title {
     text-align: center;
@@ -414,7 +418,7 @@ ul {
 }
 
 .btn {
-    margin-right: 8px;
+    background-color: var(--back-color);
     border: none;
     border-radius: 4px;
     font-family: var(--main-font);
@@ -450,6 +454,10 @@ ul {
     margin-bottom: 50px;
 }
 
+.btn-item {
+    margin-right: 8px;
+}
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -461,11 +469,6 @@ ul {
     text-decoration: none;
     border: 1px solid var(--card-border-color);
 
-}
-
-
-.project-page {
-    display: block;
 }
 
 .project-div-title {
