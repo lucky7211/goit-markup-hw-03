@@ -16,6 +16,7 @@
     --primary-title-size:44px;
     --secondary-title-size:36px;
     --title-size:26px;
+    --text-size:18px;
     --primary-text-size:14px;
     --secondary-text-size:16px;
     --bold:700;
@@ -454,9 +455,11 @@ button {
     margin-bottom: 50px;
 }
 
-.btn-item {
+
+.btn-item:not(:last-child) {
     margin-right: 8px;
 }
+
 
 .portfolio-list {
     display: flex;
